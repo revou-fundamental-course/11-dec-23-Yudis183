@@ -73,14 +73,18 @@ header img {
     background-size: cover;
 }
 
-.container-1 {
-display: block;
-}
-
-.kanan {
-display: inline;
-}
-
-.kiri {
-display: flexbox;
-}
+#content { 
+    overflow:auto; 
+    width: 100%; 
+    border: 1px solid grey; 
+  } 
+  
+  #left, #right { 
+    width: 40%; 
+    margin:5px; 
+    padding: 1em; 
+    background: white; 
+  } 
+  
+  #left  { float:left;  }
+  #right { float:right; } 
