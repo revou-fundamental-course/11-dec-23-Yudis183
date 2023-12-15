@@ -74,13 +74,13 @@ header img {
 }
 
 .container-1 {
-
+display: block;
 }
 
 .kanan {
-
+display: inline;
 }
 
 .kiri {
-
+display: flexbox;
 }
