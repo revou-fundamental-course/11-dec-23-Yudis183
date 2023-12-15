@@ -76,7 +76,8 @@ header img {
 #content { 
     overflow:auto; 
     width: 100%; 
-    border: 1px solid grey; 
+    border: 1px solid grey;
+    align-content: center;
   } 
   
   #left, #right { 
@@ -88,3 +89,8 @@ header img {
   
   #left  { float:left;  }
   #right { float:right; } 
+
+  footer {
+    float: right;
+    padding-right: 5px;
+  }
