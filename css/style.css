@@ -94,3 +94,44 @@ header img {
     float: right;
     padding-right: 5px;
   }
+
+  /* editan form */
+  .form {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .form input,
+  .form textarea, .form select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .form input[type="date"] {
+    width: 100%;
+  }  
+ 
+  .form textarea {
+    height: 150px;
+  }
+  
+  .form button {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    justify-items: center;
+  }
