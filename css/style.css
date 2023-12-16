@@ -2,6 +2,7 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* menu navigasi */
 nav {
     display: flex;
     justify-content: space-between;
@@ -43,6 +44,8 @@ nav a.active {
     margin-right: 20px;  
 }
 
+/* header */
+
 header {
     text-align: center;
 }
@@ -52,6 +55,8 @@ header img {
     aspect-ratio: auto;
     margin-bottom: 20;
 }
+
+/* konten 1 */
 
 .kursus {
     display: flex;
@@ -73,10 +78,12 @@ header img {
     background-size: cover;
 }
 
+/* konten 2 */
+
 #content { 
     overflow:auto; 
     width: 100%; 
-    border: 1px solid grey;
+    
     align-content: center;
   } 
   
@@ -90,10 +97,6 @@ header img {
   #left  { float:left;  }
   #right { float:right; } 
 
-  footer {
-    float: right;
-    padding-right: 5px;
-  }
 
   /* editan form */
   .form {
@@ -133,5 +136,13 @@ header img {
     padding: 10px;
     width: 100%;
     cursor: pointer;
-    justify-items: center;
+    justify-items: centergit;
+  }
+
+  /* footer */
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: lightgray;
+    color:ccc;
   }
