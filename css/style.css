@@ -8,88 +8,163 @@ body {
 }
 
 /* menu navigasi */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-container {
+  padding: 0 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.logo-box {
+  float: left;
+  margin-right: 20px;
+}
+.logo-box a {
+  outline: none;
+  display: block;
+}
+.logo-box img {display: block;}
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    overflow: hidden;
-    background-color: dimgray;
-    
-    
+  overflow: hidden;
 }
-
-nav img{
-  padding-left: 10px;
-}
-
-.list {
+ul {
   list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding-right: 10px;
-  color: #000;
+  margin: 0;
+  padding: 0;
+  float: right;
 }
-
-.link {
-  position: relative;
+nav li {
   display: inline-block;
+  margin-left: 25px;
+  height: 70px;
+  line-height: 70px;
+  transition: .5s linear;
+}
+nav a {
   text-decoration: none;
-  color: #fff;
-  font-weight: 700;
+  display: block;
+  position: relative;
+  color: #868686;
+  text-transform: uppercase;
 }
-
-.link::before,
-.link::after {
-  content: '';
-  left: 0;
-  position: absolute;
-  width: 100%;
+nav a:after {
+  content: "";
+  width: 0;
   height: 2px;
-  background-color: #00fffc;
-  transform: scaleX(0);
-  transition: transform 0.25s;
-}
-
-.link::before {
-  top: -3px;
-  transform-origin: left;
-}
-
-.link::after {
-  bottom: -3px;
-  transform-origin: right;
-}
-
-.link:hover::before,
-.link:hover::after,
-.active::before,
-.active::after {
-  transform: scaleX(1);
-}
-
-
-.name {
   position: absolute;
-  top: 70%;
-  font-size: 11px;
-  color: #00fffc;
-  font-weight: 800;
+  left: 0;
+  bottom: 15px;
+  background: #868686;
+  transition: width .5s linear;  
 }
+nav a:hover:after {width: 100%;}
 
+@media screen and (max-width: 660px) {
+  header {text-align: center;}
+  .logo-box {
+    float: none;
+    display: inline-block;
+    margin: 0 0 16px 0;
+  }
+  ul {float: none;}
+  nav li:first-of-type {margin-left: 0;}
+}
+@media screen and (max-width: 550px) {
+nav {overflow: visible;}
+nav li {
+  display: block;
+  margin: 0;
+  height: 40px;
+  line-height: 40px;
+}
+nav li:hover {background: rgba(0,0,0,.1);}
+nav a:after {content: none;}
+}
 
 /* header */
+
 
 header {
     text-align: center;
 }
 
 header img {
-    width:98%;
+    width:100%;
     aspect-ratio: auto;
     margin-bottom: 20;
 }
+
+
+/* mulai slider */
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* akhir slider */
+
+
 
 /* konten 1 */
 
@@ -97,6 +172,7 @@ header img {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    width: 100%;
 }
 
 .kursus div {
@@ -111,80 +187,91 @@ header img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform .2s; /* Animation */  
 }
+
+.lingkaran:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 
 /* konten 2 */
 
-#content { 
-    overflow:auto; 
-    width: 100%; 
-    
-    align-content: center;
-  } 
-  
-  #left, #right { 
-    width: 40%; 
-    margin:5px; 
-    padding: 1em; 
-    background: white; 
-  } 
-  
-  #left  { float:left;  }
-  #right { float:right; } 
+.column {
+  display: flex;
+  column-gap: 2rem;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  justify-content:space-evenly;
+}
+.column > * {
+  width: calc(50%-1rem);
+}
+
+/* form */
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=date] {
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=textarea] {
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  Height: 70px
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
 
 
-  /* editan form */
-  .form {
-    width: 300px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-  }
+/* profile */
+.profile {
+  display:block;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-content:normal;
+}
   
-  .form label {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .form input,
-  .form textarea, .form input[type="date"], .form select {
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .form textarea {
-    height: 150px;
-  }
-  
-  .form button {
-    background-color: #000;    
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;  
+  /* footer */  
+  .copyright{
+    float: left;
+    padding-left: 20px;
   }
 
-  /* table */
-  table,th,tr,td {
-    border:0.5px solid black;
-    text-align: center;
+  .social {
+    float: right;
+    padding-right: 20px;
   }
-
-  th,tr,td {
-    padding: 5px;
-  }
-  
-  
-  /* footer */
-  footer {
-    text-align: center;
-    padding: 3px;
-    background-color: dimgray;
-    text-decoration: none;
-  }
-  

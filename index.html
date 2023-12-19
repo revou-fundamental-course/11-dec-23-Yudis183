@@ -6,86 +6,119 @@
     <title>DigiU Course</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="" href="/assets/favicon.ico">
+    
 </head>
 <body>
-    <nav>
-        <img src="/assets/logo.png" alt="Logo" class="logo" height="40px" width="70px">
-        <ul class="list">
-            <li><a class="link" href="#">Home</a></li>
-            <li><a class="link" href="#course">Course</a></li>
-            <li><a class="link" href="#profile">Profile</a></li>            
-            <li><a class="link" href="#contact-us">Contact Us</a></li>
-        </ul>
-    </nav>
+  
+    <div class="nav-container">
+        <div class="logo-box">
+          <a href="/">
+            <img src="assets/logo.png" width="100  " height="58">
+          </a>
+        </div>
+        <nav>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#course">Course</a></li>                             
+          <li><a href="#msgus">Message Us</a></li>
+          <li><a href="#profile">Profile</a></li> 
+       </ul>
+      </nav>
+      </div>
+      <hr>
     <header>
-        <h1>Hey Amin !!, Welcome to DigiU Course</h1>
+        <h1>Hey <span id="namakamu"></span> !!, Welcome to DigiU Course</h1>
         <h4>"The future of IT is here. Let us help you build it."</h4>
-        <img src="/assets/header.jpg">
-    </header>
+        
+        
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="/assets/header.jpg" style="width:100%">
+            <div class="text">Software Engineering</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="/assets/digital-marketing.jpg" style="width:100%">
+            <div class="text">Digital Marketing</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="/assets/data-analytics.jpg" style="width:100%">
+            <div class="text">Data Analytics</div>
+          </div>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+  <script src="js/script.js"></script>
+        </header>
 
     <hr>
     <h1 style="text-align: center;" id="course">Course</h1>
     <div class="kursus">
         <div>
             <div class="lingkaran" style="background-image: url('assets/se.jpg');"></div>
-            <h4>Software Engineering</h4>
+            <h5>Software Engineering</h5>
         </div>
         <div>
             <div class="lingkaran" style="background-image: url('assets/da.jpg');"></div>
-            <h4>Data Analytics</h4>
+            <h5>Data Analytics</h5>
         </div>
         <div>
             <div class="lingkaran" style="background-image: url('assets/dm.jpg');"></div>
-            <h4>Digital Marketing</h4>
+            <h5>Digital Marketing</h5>
         </div>
     </div>
     <hr>
-    <div id="content">
-        <div id="left">
-            <div class="form">
-                <h2 id="contact-us">Contact Us</h2>            
-                <div class="form-group">
-                  <label for="nama">Nama :</label>
-                  <input type="text" name="nama" id="nama">
-
-                  <label for="tanggal-lahir">Tanggal Lahir :</label>
-                  <input type="date" name="tanggal-lahir" id="tanggal-lahir">
-
-                  <label for="jenis-kelamin">Jenis Kelamin:</label>
-                    <select>
-                        <option value="laki">Laki-Laki</option>
-                        <option value="perempuan">Perempuan</option>
-                    </select>
-
-                  <label for="pesan">Pesan</label>
-                  <textarea name="pesan" id="pesan"></textarea>
-
-                  <button type="submit">Submit</button>
-                </div>
-            </div>
-        </div>    
-        <div id="right">
-           <h2 id="profile">Profile</h2>
-           <table>
-            <tr>
-            <th>Nama</th>
-            <th>Tgl Lahir</th>
-            <th>Jenis Kelamin</th>
-            <th>Pesan</th>
-            <th>Action</th>
-            </tr>
-            <tr>
-                <td>Amin Darmin</td>
-                <td>14-03-1982</td>
-                <td>Laki-Laki</td>
-                <td>Testing, Testing</td>
-                <td><img src=assets/delete.png width="20" height="20"></td>
-            </tr>
-           </table>
+    <div class="column">
+      <div>        
+        <h4 id="msgus">Message Us</h4>      
+            <label for="name">Nama :</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="birthdate">Tanggal Lahir :</label>
+            <input type="date" id="birthdate" name="birthdate"><br>
+            <label for="gender">Jenis Kelamin :</label><br>
+            <input type="radio" id="kelamin" name="gender" value="Laki Laki" class="gender">
+            <label for="laki">Laki Laki</label>
+            <input type="radio" id="kelamin" name="gender" value="Perempuan" class="gender">
+            <label for="perempuan">Perempuan</label><br><br>
+            <label for="message">Pesan :</label>
+            <input type="textarea" id="message" name="message"><br>
+            <button id="submit" class="submit" onclick="getAll()">Submit</button>
+            <button id="reset" class="reset" onclick="resetAll()">Reset</button>
         </div>
+      <div>
+      <h4 id="hasil">Result Form Message Us</h4>
+            <strong>Current Time : </strong> <span id="waktu"></span> <br><br>
+            <strong>Nama : </strong> <span id="nama"></span> <br><br>
+            <strong>Tanggal Lahir : </strong> <span id="lahir"></span> <br><br>
+            <strong>Jenis Kelamin : </strong> <span id="kelamin"></span> <br><br>
+            <strong>Pesan : </strong> <span id="pesan"></span> <br><br>
       </div>
-      <footer>
-        <p><strong>Copyright &COPY; | Created by <a class="link" href="https://github.com/siamintea" target="_blank">siamintea</a></strong></p>
-      </footer>
+    </div>
+   <script src="js/script.js"></script>
+   <hr>
+   <div class="profile">
+    <h3 style="text-align: center;" id="profile">Profile <img src="assets/logo.png" width="150" height="auto"> Course</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget urna augue. Nam dolor ipsum, cursus non eros ac, condimentum venenatis odio. Ut pharetra, turpis non fermentum posuere, augue nulla ullamcorper neque, vel sagittis lorem quam sit amet turpis. Mauris odio lectus, semper id metus eget, tristique ultricies lacus. Nam pulvinar tempor felis, dapibus mollis massa blandit vitae. Nunc finibus eget ex venenatis vehicula. Donec iaculis lorem in augue lacinia volutpat. Integer vel quam nec est consectetur sollicitudin in nec purus. Donec ac turpis odio. Duis augue sapien, laoreet eget consectetur et, fermentum eget lectus. Maecenas id fringilla neque. Curabitur justo est, ultricies id facilisis in, faucibus at eros. Cras ultricies accumsan ligula in pulvinar. Maecenas sit amet sem sed nisl feugiat tempus ut at elit.</p>
+
+      <p>Aenean laoreet mauris id elit mattis lobortis. Sed tincidunt id nulla at porttitor. Maecenas elementum mauris quis mi vulputate, in rhoncus justo ullamcorper. Sed dignissim semper leo sit amet rutrum. Etiam pharetra, nisi eu venenatis tincidunt, urna ex tincidunt lorem, quis scelerisque nisi mi eu velit. Mauris at neque vel erat convallis posuere. Phasellus rhoncus placerat felis. Mauris id lorem et dolor ultricies pharetra a eu dui. Sed rutrum sem enim, a aliquam ex faucibus lacinia. Vivamus eget mauris non nisl finibus aliquam ac eget lorem. Sed vel pellentesque dui. Donec vulputate nunc vitae velit eleifend auctor. Suspendisse aliquam purus vel ultrices mattis. Etiam placerat, odio eget congue varius, arcu lacus sollicitudin nunc, eget elementum ipsum turpis eu odio. Aliquam erat libero, posuere eget venenatis et, gravida eu mauris. Proin ac nunc tellus.</p>
+    
+   </div>
+   <hr>
+   <div id="footer">
+    <h4 class="copyright">Copyright &copy; siamintea</h4>
+    <h4 class="social"><a href="https://github.com/siamintea" target="_blank"><img src="/assets/github-mark.png"></a></h4>
+    <div style="clear: both"></div>
+</div>
 </body>
 </html>
