@@ -30,7 +30,7 @@ function getAll(){
   const date = new Date();
   const name = document.getElementById("name").value;
   const birthdate = document.getElementById("birthdate").value;
-  const gender = document.querySelector('input[id="kelamin"]:checked');
+  const gender = document.querySelector('input[name="gender"]:checked');
   const message = document.getElementById("message").value;
   const time = date;
 
@@ -50,7 +50,7 @@ function getAll(){
       document.getElementById("waktu").innerHTML = time;
       document.getElementById("nama").innerHTML = name;
       document.getElementById("lahir").innerHTML = birthdate;
-      document.getElementById("kelamin").innerHTML = gender;
+      document.getElementById("kelamin").innerHTML = gender.value;
       document.getElementById("pesan").innerHTML = message;
       return true;
   }
@@ -59,10 +59,10 @@ function getAll(){
 function resetAll(){ 
   document.getElementById("name").value = null; 
   document.getElementById("birthdate").value = null; 
-  var ele = document.querySelectorAll("input[id=kelamin]");
-  for(var i=0;i<ele.length;i++){
-      ele[i].checked = false;
-  }
+  var ele = document.querySelectorAll("input[name=gender]");
+    for(var i=0;i<ele.length;i++){
+        ele[i].checked = false;
+    }
   document.getElementById("message").value = "";
   document.getElementById("waktu").innerHTML = null;
   document.getElementById("nama").innerHTML = null;
