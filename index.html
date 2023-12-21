@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yudisitra's Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!--Nav Bar-->  
+    <div class="nav-container">
+        <div class="logo-box">
+          <a href="/">
+            <img src="assets/img.jpg">
+          </a>
+        </div>
+        <nav>
+        <ul>
+          <li><b><a href="#Home">HOME</a></b></li>
+          <li><b><a href="#profile">ABOUT ME</a></b></li>                             
+          <li><b><a href="#goal">LIFE GOAL</a></b></li>
+          <li><b><a href="#msgme">MESSAGE ME</a></b></li> 
+       </ul>
+      </nav>
+      </div>
+      <hr>
+
+<!--Home-->      
+    <header id="Home">
+        <h1>Hey <span id="namakamu"></span> !! Welcome to My Website</h1>
+        <h2>Let's Get To Know Me Better</h2>
+
+          <div class="mySlides fade">
+            <img src="assets/image.jpeg" style="width:100%">
+          </div>
+          <br>
+          
+  <script src="js/script.js"></script>
+        </header>
+
+    <hr>
+
+    <!--Profile-->
+   <div class="profile">
+    <h1 style="text-align: center;" id="profile">ABOUT ME</h1>
+      
+    <h3 class="background">BACKGRUND</h3>
+      <li>Nama: Yudisitra Ariwicaksono</li> 
+      <li> Tanggal Lahir: 17 Mei 2006 di Jakarta, Indonesia.</li>
+      <li>Lulusan SD Mardi Yuana, Depok</li>
+      <li>Lulusan SMP Mardi Yuana, Depok</li>
+      <li>Saat ini saya menimba ilmu di SMA Regina Pacis Bogor dan telah memasuki tahun terakhir saya</li>
+
+    <h3 class="hobi">HOBBY</h3>
+    <li>Badminton</li>
+    <li>Mempelajari Web Developing</li>
+    <li>Bermain Game</li>
+    <li>Bermain Sepak Bola</li>
+    <li>Work Out</li>
+    
+    <h3 class="dream">DREAM</h3>
+    <p class="main"><b> To Make My Parent Proud and Happy</b></p>
+    <p class="how">Untuk memwujudkan cita-cita tersebut, saya memilih jalan untuk menjadi Web Developer. Harapannya adalah saya dapat sukses di karir ini sehingga orangtua saya dapat bahagia</p>
+      
+    <h3 class="Quote">Life Quote:</h3>
+    <p class="text"><b>"If Your Success Rate Only 1%, Your Effort Have To Be 100%</b></p>
+    <p class="text"><b>With That You Can Live Without Any Regret"</b></p>
+    
+   </div>
+   <hr>
+   
+
+<!--Proses-->
+    <h1 style="text-align: center;" id="goal">LIFE GOAL</h1>
+    <div class="goal">
+        <div>
+            <div class="circle" style="background-image: url('Assets/itb.jpeg');"></div>
+            <h5>Get Admitted Into My Favorite University</h5>
+        </div>
+        <div>
+            <div class="circle" style="background-image: url('Assets/lulus.jpeg');"></div>
+            <h5>Graduated With Good GPA</h5>
+        </div>
+        <div>
+            <div class="circle" style="background-image: url('Assets/dream job.jpeg');"></div>
+            <h5>Get My Dream Job</h5>
+        </div>
+    </div>
+    <hr>
+
+    <!--Message Me-->
+    <div class="column">
+      <div>   
+          <h4 id="msgme">Message Me</h4>      
+              <label for="name">Nama :</label>
+              <input type="text" id="name" name="name"><br>
+              <label for="birthdate">Tanggal Lahir :</label>
+              <input type="date" id="birthdate" name="birthdate"><br>
+              <label for="gender">Jenis Kelamin :</label>
+              <input type="radio" id="laki" name="gender" value="Laki Laki" class="gender">
+              <label for="laki">Laki Laki</label>
+              <input type="radio" id="perempuan" name="gender" value="Perempuan" class="gender">
+              <label for="perempuan">Perempuan</label><br><br>
+              <label for="message">Pesan :</label>
+              <input type="textarea" id="message" name="message"><br>
+              <button id="submit" class="submit" onclick="getAll()">Submit</button>
+              <button id="reset" class="reset" onclick="resetAll()">Reset</button>
+          </div>
+        <div>
+          <div class="kotak">
+            <div class="Judul"> 
+              <h4 id="hasil">Result Form Message Me</h4>
+            </div>
+            <div>
+              <strong>Current Time : </strong> <span id="waktu"></span> <br><br>
+              <strong>Nama : </strong> <span id="nama"></span> <br><br>
+              <strong>Tanggal Lahir : </strong> <span id="lahir"></span> <br><br>
+              <strong>Jenis Kelamin : </strong> <span id="kelamin"></span> <br><br>
+              <strong>Pesan : </strong> <span id="pesan"></span> <br><br>
+            </div>
+          </div>
+      </div>
+    </div>
+  
+   <script src="js/script.js"></script>
+   <hr>
+
+   <div id="footer">
+    <h4 class="copyright">Copyright &copy; Yudisitra Ariwicaksono</h4>
+    </div>
+   
+</body>
+</html>
